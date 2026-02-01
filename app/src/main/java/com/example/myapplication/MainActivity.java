@@ -10,6 +10,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.myapplication.ui.preferences.PreferencesActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         // Initialize UI components
         Button btnCreateMeeting = findViewById(R.id.btnCreateMeeting);
         Button btnViewMeetings = findViewById(R.id.btnViewMeetings);
+        Button btnPreferences = findViewById(R.id.btnPreferences);
         Button btnLogout = findViewById(R.id.btnLogout);
 
         // Set listeners
@@ -46,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
         btnViewMeetings.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, MeetingActivity.class));
+        });
+
+        btnPreferences.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, PreferencesActivity.class));
         });
 
         btnLogout.setOnClickListener(v -> {
