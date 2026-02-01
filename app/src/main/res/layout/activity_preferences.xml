@@ -1,0 +1,41 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:text="Meeting Preferences"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerTime"
+            android:entries="@array/time_preferences"/>
+
+        <Spinner
+            android:id="@+id/spinnerDuration"
+            android:entries="@array/duration_preferences"/>
+
+        <Spinner
+            android:id="@+id/spinnerFlexibility"
+            android:entries="@array/flexibility_preferences"/>
+
+        <TextView android:text="Avoided Days"/>
+
+        <CheckBox android:id="@+id/chkMon" android:text="Monday"/>
+        <CheckBox android:id="@+id/chkTue" android:text="Tuesday"/>
+        <CheckBox android:id="@+id/chkWed" android:text="Wednesday"/>
+        <CheckBox android:id="@+id/chkThu" android:text="Thursday"/>
+        <CheckBox android:id="@+id/chkFri" android:text="Friday"/>
+        <CheckBox android:id="@+id/chkSat" android:text="Saturday"/>
+        <CheckBox android:id="@+id/chkSun" android:text="Sunday"/>
+
+        <Button
+            android:id="@+id/btnSavePreferences"
+            android:text="Save Preferences"/>
+    </LinearLayout>
+</ScrollView>
